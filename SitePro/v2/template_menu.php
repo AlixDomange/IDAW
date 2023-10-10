@@ -1,8 +1,25 @@
 <nav class="menu">
-    <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="cv.php">Cv</a></li>
-        <li><a href="hobbies.php">Hobbies</a></li>
-        <li><a href="infos-techniques.php">Infos techniques</a></li>
-    </ul>
+
+<?php
+function renderMenuToHTML($currentPageId) {
+    $mymenu = array(
+        'index' => array( 'Accueil' ),
+        'cv' => array( 'Cv' ),
+        'hobbies' => array('Hobbies'),
+        'infos-techniques' => array('Infos techniques')
+    );
+    echo '<ul>';
+    foreach($mymenu as $pageId => $pageParameters) {
+        echo '<li>';
+        if ($pageId === $currentPageId) {
+            echo '<a id="currentpage" href="'. $pageId .'.php" >' . $pageParameters[0] . '</a>';
+        } else {
+            echo '<a href="' . $pageId . '.php">' . $pageParameters[0] . '</a>';
+        }
+        echo '</li>';
+    }
+    echo '</ul>';
+}
+?>
+
 </nav>

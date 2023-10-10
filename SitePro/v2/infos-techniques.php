@@ -1,7 +1,7 @@
 <?php
 require_once('template_header.php');
 ?>
-        <div class="flex">Accueil</div>
+        <div class="flex">Infos techniques</div>
     <div class="cont">
         <div>
             Contenu

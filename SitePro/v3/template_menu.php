@@ -17,14 +17,14 @@ function renderMenuToHTML($currentPageId, $currentLang) {
                 echo '<a classe="active" href="index.php?page= ' . $pageId . '" >' . $pageParameters[0] . '</a>';
             }
             else{
-                echo '<a classe="active" href="index.php?page= ' . $pageId . '" >' . $pageParameters[0] . '</a>';
+                echo '<a classe="active" href="index.php?page= ' . $pageId . '" >' . $pageParameters[1] . '</a>';
             }
         } else {
             if($currentLang==='fr'){
                 echo '<a classe="notActive" href="index.php?page= ' . $pageId . '">' . $pageParameters[0] . '</a>';
             }
             else{
-                echo '<a classe="notActive" href="index.php?page= ' . $pageId . '">' . $pageParameters[0] . '</a>';
+                echo '<a classe="notActive" href="index.php?page= ' . $pageId . '">' . $pageParameters[1] . '</a>';
             }
         }
         

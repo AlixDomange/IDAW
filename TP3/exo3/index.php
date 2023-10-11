@@ -1,3 +1,7 @@
+
+
+<!DOCTYPE html>
+
 <?php
     if(isset($_GET['css'])) {
         $selectedStyle = $_GET['css'];
@@ -17,17 +21,13 @@
     <input type="submit" value="Appliquer" />
 </form>
 
-<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Page</title>
     <?php
-    // Lire l'identifiant CSS du cookie, s'il existe. Sinon, utiliser un style par défaut.
     $selectedStyle = isset($_COOKIE['selected_style']) ? $_COOKIE['selected_style'] : 'style1';
-
-    // Inclure la bonne feuille de style en fonction de l'identifiant CSS
-    echo '<link rel="stylesheet" href="' . $selectedStyle . '.css">';
+    echo'<link rel="stylesheet" href="' . $selectedStyle . '.css">';
     ?>
 </head>
 <body>

@@ -3,31 +3,42 @@
     display: flex;
     background-color: lightblue;
     height: 100%;
-    gap: 200px;
+    gap: 100px;
     flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
   }
 
 
 
-  .flex{
+  .title{
     display: flex;
     justify-content: center;
+    align-self: center;
     width: 100%;
     font-size: 50px;
     color: black;
   }
 
+  .menu-list {
+    color: black;
+    position: absolute;
+    margin-top: 100px;
+}
 
-  .menu{
+.menu-list li {
+  color: black;
+  background-color:blueviolet;
+  border-radius: 15px;
+  padding: 10px;
+  display: inline;
+  margin-right: 20px; 
+}
+
+  .corps{
     display: flex;
+    position: relative;
     font-size: 20px;
-    justify-content: right;
-    width: 25%;
-  }
-
-  .cont{
-    display: flex;
-    font-size: 25px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -42,12 +53,7 @@
     align-items: flex-end;
   }
 
-
-
-.active{
-  color: grey;
-  text-decoration: none;
-}
-.notActive{
-  color: black;
+.menu-list li #currentpage{
+    color: black;
+    text-decoration: none;
 }

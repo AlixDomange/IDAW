@@ -1,0 +1,1 @@
+This website was coded using HTML and CSS.

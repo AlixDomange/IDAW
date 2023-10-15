@@ -1,4 +1,6 @@
+<div class="footer">
+        <div>alix.domange@etu.imt-nord-europe.fr</div>
     </div>
-<div class="footer"><div>Pied de page</div></div>
-</div>
+    </div>
+</body>
 </html>

@@ -1,3 +1,0 @@
-<div>
-    Contenu
-</div>

@@ -2,4 +2,12 @@ body{
     background-color: black;
     color: red;
     font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+form{
+    background-color: black;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
 }

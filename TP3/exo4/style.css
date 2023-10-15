@@ -3,43 +3,32 @@
     display: flex;
     background-color: lightblue;
     height: 100%;
-    gap: 100px;
+    gap: 200px;
     flex-direction: column;
-    /* justify-content: space-between; */
-    align-items: center;
   }
 
 
 
-  .title{
+  .flex{
     display: flex;
     justify-content: center;
-    align-self: center;
     width: 100%;
     font-size: 50px;
     color: black;
   }
 
-  .menu-list {
-    color: black;
-    position: absolute;
-    margin-top: 100px;
-}
 
-.menu-list li {
-  color: black;
-  background-color:blueviolet;
-  border-radius: 15px;
-  padding: 10px;
-  display: inline;
-  margin-right: 20px; 
-}
-
-  .contenu{
+  .menu{
     display: flex;
-    position: relative;
     font-size: 20px;
-    margin-left: 100px;
+    justify-content: right;
+    width: 25%;
+  }
+
+  .cont{
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 100px;
@@ -53,7 +42,7 @@
     align-items: flex-end;
   }
 
-.menu-list li #currentpage{
-    color: black;
+#currentpage{
+    color: grey;
     text-decoration: none;
 }

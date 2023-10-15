@@ -1,15 +1,14 @@
-<div>
-<nav>
+<nav class="menu">
 
 <?php
 function renderMenuToHTML($currentPageId) {
     $mymenu = array(
         'index' => array( 'Accueil' ),
         'cv' => array( 'Cv' ),
-        'projets' => array('Mes Projets'),
-        'infos' => array('Infos techniques')
+        'hobbies' => array('Hobbies'),
+        'infos-techniques' => array('Infos techniques')
     );
-    echo '<ul class= "menu-list">';
+    echo '<ul>';
     foreach($mymenu as $pageId => $pageParameters) {
         echo '<li>';
         if ($pageId === $currentPageId) {
@@ -24,4 +23,3 @@ function renderMenuToHTML($currentPageId) {
 ?>
 
 </nav>
-</div>

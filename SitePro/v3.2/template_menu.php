@@ -15,17 +15,17 @@ function renderMenuToHTML($currentPageId,$lang) {
         echo '<li>';
         if ($pageId === $currentPageId) {
             if($lang ==='fr'){
-                echo '<a id="currentpage" href="index.php?page= ' . $pageId . '" >' . $pageParameters[0] . '</a>';
+                echo '<a id="currentpage" href="index.php?page=' . $pageId . '&lang=fr" >' . $pageParameters[0] . '</a>';
             }
             else{
-                echo '<a id="currentpage" href="index.php?page= ' . $pageId . '" >' . $pageParameters[1] . '</a>';
+                echo '<a id="currentpage" href="index.php?page=' . $pageId . '&lang=en" >' . $pageParameters[1] . '</a>';
             }
         } else {
             if($lang==='fr'){
-                echo '<a href="index.php?page= ' . $pageId . '">' . $pageParameters[0] . '</a>';
+                echo '<a href="index.php?page=' . $pageId . '&lang=fr">' . $pageParameters[0] . '</a>';
             }
             else{
-                echo '<a href="index.php?page= ' . $pageId . '">' . $pageParameters[1] . '</a>';
+                echo '<a href="index.php?page=' . $pageId . '&lang=en">' . $pageParameters[1] . '</a>';
             }
         }    
         echo '</li>';

@@ -26,13 +26,14 @@
             require_once($pageToInclude);}
         else{
             require_once("error.php");}
-
-        echo '<a href="index.php?page=accueil&lang=fr">Français</a>';
-        echo '<a href="index.php?page=accueil&lang=en">Anglais</a>';
     ?>
 </section>
 
+<div class='langage'>
+<a href="index.php?page=<?php echo $currentPageId; ?>&lang=fr">Français</a>
+<a href="index.php?page=<?php echo $currentPageId; ?>&lang=en">Anglais</a>
 
+</div>
 
 <?php
 require_once("template_footer.php");

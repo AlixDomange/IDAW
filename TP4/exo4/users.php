@@ -19,7 +19,8 @@ foreach ($users as $user) {
     echo "<td><a href='modify.php?id=" . $user["id"] . "'>Modify</a> | <a href='delete.php?id=" . $user["id"] . "'>Delete</a></td>";
     echo '</tr>';
 }
-echo '</table>';
+echo '</table>'; 
+
 
 require_once('addform.php');
 if(isset($_GET['name']) && isset($_GET['email'])) {
@@ -39,3 +40,17 @@ try {
 
 $pdo = null;
 ?>
+
+<!-- <!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TP4</title>
+</head>
+<body>
+        <div class="title">Users</div>
+        <div class="contenu">
+            <?php generateTable($allUsers, $currentAction, $currentId) ?>
+        </div>
+</body>
+</html>    -->

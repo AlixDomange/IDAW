@@ -1,5 +1,6 @@
+<!-- addform -->
 <?php 
-echo '<form id="add_form" action="users.php" method="GET">';
+echo '<form id="add_form" action="add_user.php" method="post">';
     echo '<table>';
         echo '<tr>';
             echo '<th>name : </th>';

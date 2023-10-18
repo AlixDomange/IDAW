@@ -1,7 +1,7 @@
 <?php 
 
-echo '<form id="add_form" action="modify.php" method="POST">';
-echo "<input type='hidden' name='id' value=$currentId>"; 
+echo '<form id="add_form" action="users.php" method="POST">';
+ //echo "<input type='hidden' name='id' value='$currentId'>"; 
     echo '<table>';
         echo '<tr>';
             echo '<th>name : </th>';

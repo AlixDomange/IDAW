@@ -51,7 +51,6 @@
                <input type="text" class="form-control" id="inputRemarques" >
             </div>
     </div>
-...
     <div class="form-group row">
         <span class="col-sm-2"></span>
         <div class="col-sm-2">
@@ -61,8 +60,28 @@
 </form>
 <script>
 
+    let editMode = false;
+    let rowToEdit;
+
     function editerLigne(bouton) {
-        
+        editMode = true;
+
+        rowToEdit = bouton.parentNode.parentNode;
+        let cells = rowToEdit.getElementsByTagName('td');
+
+    
+        let nom = cells[0].textContent;
+        let prenom = cells[1].textContent;
+        let date = cells[2].textContent;
+        let like = cells[3].textContent.toLowerCase() === 'oui';
+        let remarques = cells[4].textContent;
+
+        $("#inputNom").val(nom);
+        $("#inputPrenom").val(prenom);
+        $("#inputDate").val(date);
+        $("#aimeLeCoursWeb").prop('checked', like);
+        $("#inputRemarques").val(remarques);
+
     }
 
     function supprimerLigne(bouton) {
@@ -70,23 +89,38 @@
         row.parentNode.removeChild(row);
     }
 
+    var studentId = 0;
+
     function onFormSubmit() {
         event.preventDefault();
         let nom = $("#inputNom").val();
         if(nom === ''){
-        alert('Veuillez remplir le champ du nom.');}
+            alert('Veuillez remplir le champ du nom.');}
         else{
-        // let nom = $("#inputNom").val();
-        let prenom = $("#inputPrenom").val();
-        let date = $("#inputDate").val();
-        let like = $("#aimeLeCoursWeb")[0].checked;
-        let remarques = $("#inputRemarques").val();
+            let prenom = $("#inputPrenom").val();
+            let date = $("#inputDate").val();
+            let like = $("#aimeLeCoursWeb")[0].checked;
+            let remarques = $("#inputRemarques").val();
+            
+            let likeMsg = "oui";
+            if(!like){likeMsg="non"}
 
-        let likeMsg = "oui";
-        if(!like){likeMsg="non"}
 
-        $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${likeMsg}</td><td>${remarques}</td><td><button onclick="editerLigne(this)">Editer</button></td><td><button onclick="supprimerLigne(this)">Supprimer</button></td></tr>`);
-        }
+            if(editMode) {
+                let cells = rowToEdit.getElementsByTagName('td');
+                cells[0].innerHTML = nom;
+                cells[1].innerHTML = prenom;
+                cells[2].innerHTML = date;
+                cells[3].innerHTML = likeMsg;
+                cells[4].innerHTML = remarques;
+                editMode = false;
+                rowToEdit = null;
+            } else {
+                $("#studentsTableBody").append(`<tr id='s${studentId}'><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${likeMsg}</td><td>${remarques}</td><td>
+                    <button onclick="editerLigne(this)">Editer</button></td><td><button onclick="supprimerLigne(this)">Supprimer</button></td></tr>`);
+                }
+            }
+        studentId++;
     }
 </script>
 </body>

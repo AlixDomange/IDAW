@@ -175,8 +175,7 @@ INSERT INTO NIVEAU_SPORT (NIVEAU_SPORT) VALUES ('moyen');
 INSERT INTO NIVEAU_SPORT (NIVEAU_SPORT) VALUES ('élevé');
 
 INSERT INTO UTILISATEUR (id_user, id_niveau, login, password, age, sexe) VALUES (1, 3, 'alixdomange', 'passwordalix', 20, 'F');
-INSERT INTO UTILISATEUR (id_user, id_niveau, login, password, age, sexe) VALUES (2, 1, 'hugojoly', 'passwordhugo', 40, 'M');
-INSERT INTO UTILISATEUR (id_user, id_niveau, login, password, age, sexe) VALUES (3, 2, 'babougratens', 'passwordbabou', 65, 'M');
+INSERT INTO UTILISATEUR (id_user, id_niveau, login, password, age, sexe) VALUES (2, 1, 'user1', 'password', 40, 'M');
 
 INSERT INTO journal (id_user, id_plat, date, quantite) VALUES (1, 1, '2023-10-23', 1.0);
 INSERT INTO journal (id_user, id_plat, date, quantite) VALUES (2, 2, '2023-10-23', 0.5);

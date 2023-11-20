@@ -1,0 +1,76 @@
+.create_centered {
+    width: 100%;
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.textboite {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ADE38D;
+    padding: 24px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-align: center;
+    margin-top: 16px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ADE38D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049; 
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.choix {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

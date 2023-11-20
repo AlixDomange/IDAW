@@ -1,0 +1,19 @@
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.conteneur {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 2px solid #ADE38D;
+    border-radius: 4px;
+    padding: 32px;
+}
+
+a {
+    text-align: center;
+    margin-top: 24px;
+}

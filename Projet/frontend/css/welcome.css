@@ -1,0 +1,32 @@
+.info {
+    background-color: #ADE38D;
+    padding: 48px;
+    gap:48px;
+    display: flex;
+    flex-direction: row;
+}
+.section {
+    width: 100%;
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.biboite {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 400px;
+    align-items: center;
+}
